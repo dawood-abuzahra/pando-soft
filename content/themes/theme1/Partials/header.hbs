@@ -1,0 +1,65 @@
+
+
+
+
+<header >
+     
+<nav>
+    <img  src="/content/images/logo.webp" alt="pandosoft" class="logo no-select" onclick="window.location.href='/{{locale}}/'">
+    <div>
+    
+
+        <div class="menu no-select" onclick="openSidebar()">
+            <div class="menu-icon"></div>
+        </div>
+    </div>
+    
+        <a href="/" onclick="selectNav(this)" id="{{locale}}-item-home" class="item no-select">{{t "Home"}}</a>
+        <a href="/projects" onclick="selectNav(this)" id="{{locale}}-item-projects" class="item no-select">{{t "Projects"}}</a>
+        <a href="/contribute" onclick="selectNav(this)" id="{{locale}}-item-services" class="item no-select">{{t "Services"}}</a>
+        <a href="/about" onclick="selectNav(this)" id="{{locale}}-item-about-us" class="item no-select" style="color: red;">{{t "About Us"}}</a>
+        <a href="/" onclick="selectNav(this)" id="{{locale}}-item-technologies" class="item no-select">{{"t Technologies"}}</a>
+        <a href="/" onclick="selectNav(this)" id="{{locale}}-item-contact" class="item no-select">{{t "Contact Us"}}</a>
+        <a onclick="toggleLanguage()" class="item no-select ar-btn">عربي
+        </a>
+        <a href="/start-project" onclick="selectNav(this)" class="item no-select start-a-project">{{t "Start a Project"}}</a>
+  
+</nav>
+ <nav class="gh-head-inner inner gh-container">
+
+            <div class="gh-head-brand">
+                <a class="gh-head-logo" href="{{@site.url}}">
+                    {{#if @site.logo}}
+                        <img src="{{@site.logo}}" alt="{{@site.title}}" />
+                    {{else}}
+                        {{@site.title}}
+                    {{/if}}
+                </a>
+                <a class="gh-burger" role="button">
+                    <div class="gh-burger-box">
+                        <div class="gh-burger-inner"></div>
+                    </div>
+                </a>
+            </div>
+            <div class="gh-head-menu">
+                {{navigation}}
+            </div>
+            <div class="gh-head-actions">
+                <div class="gh-social">
+                    {{#if @site.facebook}}
+                        <a class="gh-social-facebook" href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
+                    {{/if}}
+                    {{#if @site.twitter}}
+                        <a class="gh-social-twitter" href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
+                    {{/if}}
+                </div>
+
+                {{#unless @member}}
+                    <a class="gh-head-button" href="#/portal/signup">Subscribe</a>
+                {{else}}
+                    <a class="gh-head-button" href="#/portal/account">Account</a>
+                {{/unless}}
+            </div>
+        </nav>
+
+</header>

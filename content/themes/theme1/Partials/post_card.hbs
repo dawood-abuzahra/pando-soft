@@ -1,0 +1,56 @@
+<article class="card">
+    {{#if feature_image}}
+    <div class="card-image">
+        <figure class="image is-4by3">
+            <a href="{{url}}"> <img src="{{feature_image}}" alt="{{title}}"></a>
+           
+        </figure>
+
+    </div>
+    {{/if}}
+    <div class="card-content">
+       
+        <h1 class= "title is-4">{{title}}</h1>
+        <div class="content">
+            <p>
+                {{#if meta_description}}
+                {{meta_description}}
+                {{else}}
+                {{except words = "40"}}...
+
+                {{/if}}
+
+            </p>
+            {{!-- <p>{{tags}}
+                {{date}}
+            </p> --}}
+        </div>
+
+    </div>
+</article>
+
+
+
+{{!-- <div class="projects" id="projects">
+  <div class="projects_intro">
+    <div class="projects_intro-1">{{t "Explore Our Works"}}</div>
+    <div class="projects_intro-2">
+      <div class="arrow-prev no-select" onclick="null">
+        <span>←</span>
+        </div>
+        <div class="arrow-next no-select active" onclick="scrollHorizontally('projects_content', false)">
+          <span>→</span>
+          </div>
+          </div>
+          </div>
+          <div class="projects_content" onscroll="scrollHorizontally('projects_content',null)">
+            <div class="projects_content-project">
+              <img src="/static/img/jahez.webp" alt="jahez project">
+              <div class="projects_content-project--info">
+                <div class="projects_content-project--info_title">Jahez</div>
+                <div class="projects_content-project--info_desc">Food &amp; Drink</div>
+                </div>
+                </div>
+                        </div>
+                        </div>
+                        --}}

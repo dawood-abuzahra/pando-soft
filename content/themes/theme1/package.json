@@ -1,0 +1,17 @@
+{
+    "name":"dawood_welcome",
+    "dwscription":"a theme for az.io",
+    "version":"0.0.1",
+    "engines":{
+        "ghost":">=1.0.0"
+    },
+    "author":{
+        "name":"dawood",
+        "email":"dawoodbasher@gmail.com"
+    },
+    "config":{
+        "posts_per_page":5
+    }
+
+
+}
